@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/account.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/add.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/bg.xml" value="0.176" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/bg2.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/camera.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/red_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/search.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/setting.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/star.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/stats.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/tune.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_add.xml" value="0.4" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_trans.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/add_item.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_accounts.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_add_new_data.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_stats.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_trans.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
