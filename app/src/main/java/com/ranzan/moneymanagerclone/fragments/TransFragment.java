@@ -5,34 +5,66 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ranzan.moneymanagerclone.Data;
+import com.ranzan.moneymanagerclone.DataAdapter;
+import com.ranzan.moneymanagerclone.ItemClickListener;
 import com.ranzan.moneymanagerclone.R;
 
-public class TransFragment extends Fragment {
+import java.util.ArrayList;
+
+public class TransFragment extends Fragment implements ItemClickListener {
     private RecyclerView recyclerView;
     private TextView totalIncome, totalExpenses, totalAmount;
+    private static ArrayList<Data> dataList = new ArrayList<>();
+    private double nTotalIncome = 0, nTotalExpenses = 0, nTotalAmount = 0;
 
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_trans, container, false);
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null)
+            dataList = (ArrayList<Data>) getArguments().getSerializable("Data");
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initViews(view);
-        buildData();
+        setRecyclerView();
+        setTotalAmounts();
     }
 
-    private void buildData() {
+    private void setTotalAmounts() {
+        for (Data item : dataList) {
+            if (item.getType() == 1) {
+                nTotalIncome += item.getAmount();
+            } else if (item.getType() == 2) {
+                nTotalExpenses += -item.getAmount();
+            }
+        }
+        totalIncome.setText(String.format("%.2f", nTotalIncome));
+        totalExpenses.setText(String.format("%.2f", Math.abs(nTotalExpenses)));
+        totalAmount.setText(String.format("%.2f", (nTotalIncome + nTotalExpenses)));
+    }
 
+    private void setRecyclerView() {
+        DataAdapter dataAdapter = new DataAdapter(dataList, TransFragment.this);
+        LinearLayoutManager layout = new LinearLayoutManager(getContext());
+        recyclerView.setAdapter(dataAdapter);
+        recyclerView.setLayoutManager(layout);
     }
 
     private void initViews(View view) {
@@ -43,8 +75,7 @@ public class TransFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    public void onItemClicked(Data data, int position) {
+        Toast.makeText(getContext(), "HEY", Toast.LENGTH_SHORT).show();
     }
 }

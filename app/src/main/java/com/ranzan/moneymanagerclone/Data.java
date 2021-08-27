@@ -1,7 +1,9 @@
 package com.ranzan.moneymanagerclone;
 
-public class Data {
-    private String type;
+import java.io.Serializable;
+
+public class Data implements Serializable {
+    private int type;
     private String date;
     private String time;
     private String account;
@@ -10,7 +12,7 @@ public class Data {
     private String note;
     private String description;
 
-    public Data(String type, String date, String time, String account, String category, int amount, String note, String description) {
+    public Data(int type, String date, String time, String account, String category, int amount, String note, String description) {
         this.type = type;
         this.date = date;
         this.time = time;
@@ -21,7 +23,7 @@ public class Data {
         this.description = description;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 

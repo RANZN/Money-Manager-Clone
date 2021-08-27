@@ -4,23 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".fragments.TransFragment">
 
     <View
         android:layout_width="match_parent"
+        android:background="@drawable/view_bg"
         android:layout_height="0dp"
-        android:background="@drawable/bg"
-        app:layout_constraintBottom_toBottomOf="@+id/totalIncome"
-        app:layout_constraintTop_toTopOf="@id/tvAmount" />
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/givenDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/tune"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/search"
+        app:layout_constraintEnd_toStartOf="@id/ivTune"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/star"
+        app:layout_constraintEnd_toStartOf="@id/ivSearch"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/tvIncome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Income"
         app:layout_constraintEnd_toStartOf="@id/tvExpenses"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/givenDate" />
 
     <TextView
         android:id="@+id/tvExpenses"
@@ -68,6 +106,7 @@
         android:id="@+id/totalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
         android:text="1000"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -80,7 +119,5 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/totalAmount" />
 </androidx.constraintlayout.widget.ConstraintLayout>
