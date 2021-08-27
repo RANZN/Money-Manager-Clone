@@ -19,10 +19,11 @@ import com.ranzan.moneymanagerclone.ItemClickListener;
 import com.ranzan.moneymanagerclone.R;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class TransFragment extends Fragment implements ItemClickListener {
     private RecyclerView recyclerView;
-    private TextView totalIncome, totalExpenses, totalAmount;
+    private TextView totalIncome, totalExpenses, totalAmount, date;
     private static ArrayList<Data> dataList = new ArrayList<>();
     private double nTotalIncome = 0, nTotalExpenses = 0, nTotalAmount = 0;
 
@@ -45,6 +46,14 @@ public class TransFragment extends Fragment implements ItemClickListener {
         initViews(view);
         setRecyclerView();
         setTotalAmounts();
+        setDateOnTop();
+    }
+
+    private void setDateOnTop() {
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        int month = Calendar.getInstance().get(Calendar.MONTH);
+        int day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+        date.setText(String.format("%02d", day) + "/" + String.format("%02d", month + 1) + "/"+year);
     }
 
     private void setTotalAmounts() {
@@ -72,6 +81,7 @@ public class TransFragment extends Fragment implements ItemClickListener {
         totalIncome = view.findViewById(R.id.totalIncome);
         totalExpenses = view.findViewById(R.id.totalExpenses);
         totalAmount = view.findViewById(R.id.totalAmount);
+        date = view.findViewById(R.id.givenDate);
     }
 
     @Override

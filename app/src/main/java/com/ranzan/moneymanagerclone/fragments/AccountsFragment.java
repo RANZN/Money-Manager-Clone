@@ -53,6 +53,9 @@ public class AccountsFragment extends Fragment {
                 totalAccount += item.getAmount();
             }
         }
+        cash.setText(String.format("%.2f", totalCash));
+        account.setText(String.format("%.2f", totalAccount));
+        card.setText(String.format("%.2f", totalCard));
     }
 
     private void initViews(View view) {

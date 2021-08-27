@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class DataAdapter extends RecyclerView.Adapter<DataViewHolder> {
     private ItemClickListener itemClickListener;
-    private ArrayList<Data> dataList = new ArrayList<>();
+    private ArrayList<Data> dataList;
 
     public DataAdapter(ArrayList<Data> data, ItemClickListener itemClickListener) {
         this.dataList = data;

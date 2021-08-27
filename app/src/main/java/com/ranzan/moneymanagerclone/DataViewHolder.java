@@ -23,9 +23,9 @@ public class DataViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void initViews(View view) {
-        category = view.findViewById(R.id.itemAccount);
+        account = view.findViewById(R.id.itemAccount);
         note = view.findViewById(R.id.itemNote);
-        account = view.findViewById(R.id.itemCategory);
+        category = view.findViewById(R.id.itemCategory);
         amount = view.findViewById(R.id.itemAmount);
         date_n_time = view.findViewById(R.id.dateNtime);
     }

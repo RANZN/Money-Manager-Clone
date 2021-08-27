@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AccountsFragment">
 
@@ -214,4 +215,16 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/itemCard" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.75"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="In Progress"
+        android:textColor="@color/expense"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

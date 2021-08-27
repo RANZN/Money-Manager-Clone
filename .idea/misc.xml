@@ -6,28 +6,37 @@
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/account.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/add.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/bg.xml" value="0.176" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/bg1.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/bg2.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/btn_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/camera.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/ic_dots.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/ic_recommend.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/letstry.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/nav_bg1.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/nav_bg2.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/red_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/search.xml" value="0.23796296296296296" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/setting.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/setting_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/star.xml" value="0.23796296296296296" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/stats.xml" value="0.23796296296296296" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/tune.xml" value="0.23796296296296296" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/drawable/view_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_add.xml" value="0.4" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_add_new_data.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_login.xml" value="0.2359375" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/activity_trans.xml" value="0.25" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/add_item.xml" value="0.25" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_accounts.xml" value="0.25" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_add_new_data.xml" value="0.25" />
-        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_setting.xml" value="0.264" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_stats.xml" value="0.25" />
         <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/layout/fragment_trans.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="..\:/Users/PRAKASH RANJAN/AndroidStudioProjects/MoneyManagerClone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
       </map>
     </option>
   </component>

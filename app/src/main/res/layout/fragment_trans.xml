@@ -15,11 +15,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:paddingLeft="10dp"
         android:id="@+id/givenDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20dp"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
