@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "447281796885",
+    "firebase_url": "https://money-manager-clone-default-rtdb.firebaseio.com",
+    "project_id": "money-manager-clone",
+    "storage_bucket": "money-manager-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447281796885:android:6c201b5e97c1169bb3fb1c",
+        "android_client_info": {
+          "package_name": "com.ranzan.moneymanagerclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447281796885-051mrrdf0ommo0bfma166mc15krqlktu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBirRCHxZF1CTX74i8di6ryA_6uAFB-hyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447281796885-051mrrdf0ommo0bfma166mc15krqlktu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
