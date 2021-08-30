@@ -33,6 +33,7 @@ public class TransFragment extends Fragment implements ItemClickListener {
         return inflater.inflate(R.layout.fragment_trans, container, false);
     }
 
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

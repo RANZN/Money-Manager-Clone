@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,55 +38,22 @@ public class SettingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        userName = PreferenceHelper.getStringFromPreference(getContext(), "userName");
         return inflater.inflate(R.layout.fragment_setting, container, false);
     }
 
-    private void isLogin() {
-        if (firebaseAuth.getCurrentUser() != null) {
-            GenericTypeIndicator<UserData> genericTypeIndicator = new GenericTypeIndicator<UserData>() {
-            };
-            databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    UserData userData = snapshot.getValue(genericTypeIndicator);
-                    if (userData != null)
-                        PreferenceHelper.writeStringToPreference(getContext(), "userName", userData.getName());
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         intiViews(view);
-        ifLogin();
-        isLogin();
-    }
-
-    private void ifLogin() {
-        if (!name.getText().toString().equals("")) {
-            signOut.setVisibility(View.VISIBLE);
-            signUp.setVisibility(View.GONE);
-            login.setVisibility(View.GONE);
-        } else {
-            signUp.setVisibility(View.VISIBLE);
-            signOut.setVisibility(View.GONE);
-            login.setVisibility(View.VISIBLE);
+        userName = PreferenceHelper.getStringFromPreference(getContext(), "userName");
+        if (userName != null) {
+            name.setText(userName.toUpperCase());
         }
     }
 
     private void intiViews(View view) {
         name = view.findViewById(R.id.name);
-        if (userName != null)
-            name.setText(userName.toUpperCase());
         login = view.findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,10 +76,51 @@ public class SettingFragment extends Fragment {
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getActivity(), TransActivity.class));
-                userName = "";
-                PreferenceHelper.writeStringToPreference(getContext(), "userName", null);
+                PreferenceHelper.writeStringToPreference(getContext(), "userName", "");
+                name.setText("");
             }
         });
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        ifLogin();
+        if (currentUser != null)
+            login();
+    }
+
+    private void login() {
+        if (firebaseAuth.getCurrentUser() != null) {
+            GenericTypeIndicator<UserData> genericTypeIndicator = new GenericTypeIndicator<UserData>() {
+            };
+            databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    UserData userData = snapshot.getValue(genericTypeIndicator);
+                    name.setText(userData.getName().toUpperCase());
+                    PreferenceHelper.writeStringToPreference(getContext(), "userName", userData.getName());
+                    ifLogin();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
+    }
+
+    private void ifLogin() {
+        if (!name.getText().toString().equals("")) {
+            signOut.setVisibility(View.VISIBLE);
+            signUp.setVisibility(View.GONE);
+            login.setVisibility(View.GONE);
+        } else {
+            signUp.setVisibility(View.VISIBLE);
+            signOut.setVisibility(View.GONE);
+            login.setVisibility(View.VISIBLE);
+        }
+    }
 }
