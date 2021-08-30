@@ -25,7 +25,7 @@ import com.ranzan.moneymanagerclone.Login.SignUpActivity;
 import com.ranzan.moneymanagerclone.Login.UserData;
 import com.ranzan.moneymanagerclone.PreferenceHelper;
 import com.ranzan.moneymanagerclone.R;
-import com.ranzan.moneymanagerclone.TransActivity;
+import com.ranzan.moneymanagerclone.MainActivity;
 
 public class SettingFragment extends Fragment {
     private Button login, signUp, signOut;
@@ -75,7 +75,7 @@ public class SettingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getActivity(), TransActivity.class));
+                startActivity(new Intent(getActivity(), MainActivity.class));
                 PreferenceHelper.writeStringToPreference(getContext(), "userName", "");
                 name.setText("");
             }

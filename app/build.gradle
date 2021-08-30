@@ -46,6 +46,7 @@ dependencies {
     // Chart and graph library
     implementation 'com.github.blackfizz:eazegraph:1.2.5l@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
+
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
     // Declare the dependency for the Firebase Authentication library
@@ -54,4 +55,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-database:20.0.1'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-bom:28.4.0'
 }

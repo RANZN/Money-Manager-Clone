@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.ranzan.moneymanagerclone.R;
-import com.ranzan.moneymanagerclone.TransActivity;
+import com.ranzan.moneymanagerclone.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private AppCompatEditText email, password;
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference = firebaseDatabase.getReference("users");
+    DatabaseReference databaseReference = firebaseDatabase.getReference("user");
 
 
     @Override
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                     Log.d("TAGA",firebaseAuth.getCurrentUser().getUid().toString());
-                                                    Intent intent = new Intent(LoginActivity.this, TransActivity.class);
+                                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                                     startActivity(intent);
                                                     Toast.makeText(getBaseContext(), "Login successful", Toast.LENGTH_SHORT).show();
                                                 }

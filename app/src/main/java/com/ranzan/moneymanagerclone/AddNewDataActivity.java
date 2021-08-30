@@ -131,7 +131,7 @@ public class AddNewDataActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(AddNewDataActivity.this, TransActivity.class);
+        Intent intent = new Intent(AddNewDataActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
@@ -149,7 +149,7 @@ public class AddNewDataActivity extends AppCompatActivity {
                             Integer.parseInt(amount.getText().toString()),
                             note.getText().toString(),
                             description.getText().toString()));
-                    Intent intent = new Intent(AddNewDataActivity.this, TransActivity.class);
+                    Intent intent = new Intent(AddNewDataActivity.this, MainActivity.class);
                     intent.putExtra("data", dataList);
                     startActivity(intent);
                 } else amount.setError("Enter amount");

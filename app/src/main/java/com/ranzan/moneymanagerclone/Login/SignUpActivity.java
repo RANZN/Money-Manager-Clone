@@ -2,6 +2,7 @@ package com.ranzan.moneymanagerclone.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ranzan.moneymanagerclone.R;
-import com.ranzan.moneymanagerclone.TransActivity;
+import com.ranzan.moneymanagerclone.MainActivity;
 
 public class SignUpActivity extends AppCompatActivity {
     private AppCompatEditText name, email, password;
@@ -55,7 +56,8 @@ public class SignUpActivity extends AppCompatActivity {
                                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
-                                                        Intent intent = new Intent(SignUpActivity.this, TransActivity.class);
+                                                        Log.d("qwerty",name.getText().toString()+"   "+email.getText().toString().trim()+"  "+ password.getText().toString());
+                                                        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                                         startActivity(intent);
                                                         Toast.makeText(getBaseContext(), "SignUp successful", Toast.LENGTH_SHORT).show();
                                                     }
@@ -85,7 +87,6 @@ public class SignUpActivity extends AppCompatActivity {
             return false;
         } else if (password.getText().toString().trim().length() < 9) {
             password.setError("Password too short");
-
             return false;
         }
         return true;
